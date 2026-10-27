@@ -59,6 +59,42 @@ export const experience = [
     ],
   },
   {
+    company: 'Niharika Aerospace Pvt Ltd',
+    role: 'Design Engineer',
+    place: 'Bengaluru, India',
+    period: 'August 2025 – February 2026',
+    points: [
+      'Designed aerospace sheet-metal and machined components using SolidWorks/CATIA V5 as per AS9100 & ISO standards.',
+      'Prepared detailed 2D drawings applying correct GD&T, tolerance stack-up, and aerospace dimensioning rules.',
+      'Converted customer STEP files into fully manufacturable aerospace drawings with title blocks, notes, material specs, and processes.',
+      'Created and maintained engineering documentation including BOM, ECN/ECO, revision control, FAIR input, and technical reports.',
+      'Performed feasibility checks on models, material selection, and design changes before release to production.',
+    ],
+  },
+  {
+    company: 'Williams Refrigeration',
+    role: 'Junior Design Engineer',
+    place: 'Bengaluru, India',
+    period: 'June 2024 – August 2025',
+    points: [
+      'Proficient in designing complex sheet metal components using CAD tools like SolidWorks, AutoCAD, and CATIA.',
+      'Extensive experience in sheet metal forming processes, including bending, stamping, and laser cutting.',
+      'Skilled in generating detailed engineering drawings and technical specifications for sheet metal parts.',
+      'Experienced in creating prototypes and conducting design reviews to ensure manufacturability.',
+    ],
+  },
+  {
+    company: 'Hydroline Products Private Limited',
+    role: 'Design Engineer',
+    place: 'Bengaluru, India',
+    period: 'November 2023 – June 2024',
+    points: [
+      'Generated tangible 3D models based on 2D design sketches and material samples.',
+      'Implemented a design that reduced manufacturing cost by 20%.',
+      'Newly designed and built a Hydraulic breather with computerized lock system.',
+    ],
+  },
+  {
     company: 'Hindustan Aeronautics Limited (HAL), ACD Division',
     role: 'Internship',
     place: 'India',
