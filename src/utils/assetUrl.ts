@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 /**
  * Prepends Vite's BASE_URL so assets resolve correctly on both
  * localhost (base = "/") and GitHub Pages (base = "/abhishek-portfolio/").
