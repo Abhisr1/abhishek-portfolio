@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { achievements, certifications, education, experience, profile, projects, skillCategories } from '../data/portfolio';
 import { EASE, Magnetic, SectionHeading } from './fx';
+import { asset } from '../utils/assetUrl';
 
 /** THE FULL STORY — a designed resume preview plus view / download actions. */
 export default function ResumeSection({ onView }: { onView: () => void }) {
@@ -37,7 +38,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
             </Magnetic>
             <Magnetic className="w-full">
               <a
-                href={profile.resumePdf}
+                href={asset(profile.resumePdf)}
                 download="Abhishek_SR_Resume_Public.pdf"
                 data-cursor="link"
                 className="glass flex min-h-12 w-full items-center justify-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:bg-white/15"

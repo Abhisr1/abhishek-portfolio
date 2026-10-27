@@ -5,6 +5,7 @@ import { useFinePointer } from '../hooks/useMedia';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { EASE, Magnetic, Particles } from './fx';
 import { SeriesMark } from './Poster';
+import { asset } from '../utils/assetUrl';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.25 } } };
 const item = {
@@ -87,8 +88,8 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
           {/* rim light ring */}
           <div aria-hidden className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-crimson-2/20 shadow-[0_0_120px_rgba(229,19,43,0.35),inset_0_0_80px_rgba(229,19,43,0.18)]" />
           <img
-            src={profile.portrait.src}
-            srcSet={profile.portrait.srcSet}
+            src={asset(profile.portrait.src)}
+            srcSet={`${asset('/assets/portrait-420.webp')} 420w, ${asset('/assets/portrait-720.webp')} 720w, ${asset('/assets/portrait-1100.webp')} 1100w`}
             sizes="(max-width: 1024px) 100vw, 54vw"
             alt={profile.portrait.alt}
 

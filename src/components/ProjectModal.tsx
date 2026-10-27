@@ -4,6 +4,7 @@ import { projects, type Project } from '../data/portfolio';
 import { useScrollLock } from '../hooks/smoothScroll';
 import { EASE, Magnetic } from './fx';
 import { ProjectArt } from './Poster';
+import { asset } from '../utils/assetUrl';
 
 const block = {
   hidden: { opacity: 0, y: 24, filter: 'blur(8px)' },
@@ -183,7 +184,7 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
                     >
                       <div className="relative aspect-[16/11] overflow-hidden bg-ink-2">
                         <img
-                          src={img.src}
+                          src={asset(img.src)}
                           alt={img.caption}
                           loading="lazy"
                           className="h-full w-full object-contain p-2 transition duration-500 group-hover:scale-[1.03]"

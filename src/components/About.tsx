@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { education, experience, profile } from '../data/portfolio';
 import { EASE, SectionHeading, Tilt } from './fx';
+import { asset } from '../utils/assetUrl';
 
 export default function About() {
   const facts = [
@@ -26,8 +27,8 @@ export default function About() {
             <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_30%,#5a0b1b,#14060a_60%,#07070a)]" />
             <div className="absolute inset-0 opacity-50 [background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.03)_0px,rgba(255,255,255,0.03)_1px,transparent_1px,transparent_28px)]" />
             <img
-              src="/assets/portrait-720.webp"
-              srcSet={profile.portrait.srcSet}
+              src={asset('/assets/portrait-720.webp')}
+              srcSet={`${asset('/assets/portrait-420.webp')} 420w, ${asset('/assets/portrait-720.webp')} 720w, ${asset('/assets/portrait-1100.webp')} 1100w`}
               sizes="(max-width: 1024px) 90vw, 40vw"
               alt={profile.portrait.alt}
               loading="lazy"
