@@ -70,10 +70,12 @@ export const experience = [
 ];
 
 export type Metric = { value: string; label: string };
+export type ProjectImage = { src: string; caption: string };
 export type Project = {
   id: string; title: string; year: string; genre: string; logline: string; stack: string[];
   build: string[]; features: string[]; metrics: Metric[]; github?: string; palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
+  images?: ProjectImage[];
 };
 
 export const projects: Project[] = [
@@ -99,6 +101,12 @@ export const projects: Project[] = [
     metrics: [],
     palette: { from: '#17120a', via: '#69451a', to: '#08090c', accent: '#ffb547' },
     motif: 'flow',
+    images: [
+      { src: '/assets/projects/cabin-assembly.webp', caption: 'Full Cabin 3D Assembly Modelling' },
+      { src: '/assets/projects/cabin-frame.webp', caption: 'Structural Cabin Frame & Weldment Architecture' },
+      { src: '/assets/projects/cabin-door.webp', caption: 'Door Sub-assembly & Hardware CAD Development' },
+      { src: '/assets/projects/cabin-exploded.webp', caption: 'Exploded View & Subsystem Mechanical Breakdown' },
+    ],
   },
   {
     id: 'locomotive-couplers',

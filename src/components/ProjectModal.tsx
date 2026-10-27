@@ -165,6 +165,39 @@ export default function ProjectModal({ project, onClose, onSwitch }: { project: 
               </div>
             </div>
 
+            {project.images && project.images.length > 0 && (
+              <motion.section variants={block} className="mt-12 border-t border-white/10 pt-8">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-[11px] font-bold uppercase tracking-[0.3em] text-crimson-2">
+                    CAD & Engineering Visualizations
+                  </h3>
+                  <span className="text-[11px] text-mist/70">
+                    * Proprietary OEM markings & dimensional data redacted for confidentiality
+                  </span>
+                </div>
+                <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                  {project.images.map((img) => (
+                    <figure
+                      key={img.src}
+                      className="group overflow-hidden rounded-xl bg-black/40 ring-1 ring-white/10 transition hover:ring-white/30"
+                    >
+                      <div className="relative aspect-[16/11] overflow-hidden bg-ink-2">
+                        <img
+                          src={img.src}
+                          alt={img.caption}
+                          loading="lazy"
+                          className="h-full w-full object-contain p-2 transition duration-500 group-hover:scale-[1.03]"
+                        />
+                      </div>
+                      <figcaption className="border-t border-white/5 bg-ink/60 px-4 py-2.5 text-xs font-medium text-bone/80">
+                        {img.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+
             {/* more like this */}
             <motion.section variants={block} className="mt-14 border-t border-white/10 pt-8">
               <h3 className="mb-4 font-sans text-lg font-semibold text-bone">More Originals</h3>
