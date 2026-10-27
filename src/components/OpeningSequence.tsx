@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { profile } from '../data/portfolio';
 import { useReducedMotionPref } from '../hooks/useMedia';
 import { EASE, Magnetic } from './fx';
+import { asset } from '../utils/assetUrl';
 
 /**
  * The signature moment:
@@ -88,8 +89,8 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
         transition={{ duration: 1.6, ease: EASE }}
       >
         <img
-          src={profile.portrait.src}
-          srcSet={profile.portrait.srcSet}
+          src={asset(profile.portrait.src)}
+          srcSet={`${asset('/assets/portrait-420.webp')} 420w, ${asset('/assets/portrait-720.webp')} 720w, ${asset('/assets/portrait-1100.webp')} 1100w`}
           sizes="(max-width: 768px) 100vw, 900px"
           alt={profile.portrait.alt}
           className="h-full w-auto max-w-none object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_55%,transparent_98%)]"

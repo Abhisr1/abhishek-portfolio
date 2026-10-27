@@ -4,6 +4,7 @@ import { introSlides, profile } from '../data/portfolio';
 import { useScrollLock } from '../hooks/smoothScroll';
 import { useReducedMotionPref } from '../hooks/useMedia';
 import { EASE } from './fx';
+import { asset } from '../utils/assetUrl';
 
 const SLIDE_MS = 3600;
 
@@ -101,8 +102,8 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
         style={{ transformOrigin: '50% 30%' }}
       >
         <img
-          src={profile.portrait.src}
-          srcSet={profile.portrait.srcSet}
+          src={asset(profile.portrait.src)}
+          srcSet={`${asset('/assets/portrait-420.webp')} 420w, ${asset('/assets/portrait-720.webp')} 720w, ${asset('/assets/portrait-1100.webp')} 1100w`}
           sizes="100vw"
           alt=""
           className="h-[88vh] w-auto max-w-none object-contain [mask-image:linear-gradient(to_bottom,black_60%,transparent)]"
